@@ -12,7 +12,7 @@ def df(x):
 
 def trapezios(f, a, b, h):
     n = int((b - a) / h)
-    integral = f(0) + f(b)
+    integral = f(a) + f(b)
     for i in range(1, n):
         integral += 2 * f(a + h*i)
     integral *= h/2
@@ -21,7 +21,7 @@ def trapezios(f, a, b, h):
 
 def simpson(f, a, b, h):
     n = int((b - a) / h)
-    integral = f(0) + f(b)
+    integral = f(a) + f(b)
     for i in range(1, n):
         if (i % 2 == 0):
             integral += 2 * f(a + h*i)
